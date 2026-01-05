@@ -3,13 +3,18 @@
  * Version: 1.0
  */
 
+// Development mode check
+const isDevelopment = window.location.hostname === 'localhost' || window.location.hostname === '127.0.0.1';
+
 // Initialize AOS (Animate On Scroll) library
-AOS.init({
-    duration: 800,
-    easing: 'ease-in-out',
-    once: true,
-    offset: 100
-});
+if (typeof AOS !== 'undefined') {
+    AOS.init({
+        duration: 800,
+        easing: 'ease-in-out',
+        once: true,
+        offset: 100
+    });
+}
 
 // ===================================
 // Navigation Menu Toggle (Mobile)
@@ -177,7 +182,9 @@ document.querySelectorAll('a[href="#"]').forEach(link => {
 // ===================================
 function trackEvent(category, action, label) {
     // Placeholder for Google Analytics or other tracking
-    console.log(`Event tracked: ${category} - ${action} - ${label}`);
+    if (isDevelopment) {
+        console.log(`Event tracked: ${category} - ${action} - ${label}`);
+    }
     
     // Uncomment when Google Analytics is set up:
     // if (typeof gtag !== 'undefined') {
@@ -199,16 +206,18 @@ document.querySelectorAll('.button-download, .button-primary').forEach(button =>
 // ===================================
 // Console Welcome Message
 // ===================================
-console.log('%cTask Flow Website', 'font-size: 20px; font-weight: bold; color: #2E90FA;');
-console.log('%cCollaborate and Achieve', 'font-size: 14px; color: #94A3B8;');
-console.log('Version 1.0 - Built with ❤️ by Task Flow Development Team');
+if (isDevelopment) {
+    console.log('%cTask Flow Website', 'font-size: 20px; font-weight: bold; color: #2E90FA;');
+    console.log('%cCollaborate and Achieve', 'font-size: 14px; color: #94A3B8;');
+    console.log('Version 1.0 - Built with ❤️ by Task Flow Development Team');
+}
 
 // ===================================
 // Performance Monitoring
 // ===================================
 window.addEventListener('load', () => {
-    // Log page load time
-    if (window.performance) {
+    // Log page load time in development
+    if (isDevelopment && window.performance) {
         const perfData = window.performance.timing;
         const pageLoadTime = perfData.loadEventEnd - perfData.navigationStart;
         console.log(`Page load time: ${pageLoadTime}ms`);
@@ -245,7 +254,7 @@ document.addEventListener('keydown', (e) => {
 // ===================================
 const prefersReducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)');
 
-if (prefersReducedMotion.matches) {
+if (prefersReducedMotion.matches && typeof AOS !== 'undefined') {
     // Disable AOS animations for users who prefer reduced motion
     AOS.init({
         disable: true
@@ -258,7 +267,9 @@ if (prefersReducedMotion.matches) {
 // Placeholder for theme toggle functionality
 function toggleTheme() {
     // This can be implemented later if light theme is needed
-    console.log('Theme toggle not yet implemented');
+    if (isDevelopment) {
+        console.log('Theme toggle not yet implemented');
+    }
 }
 
 // ===================================
@@ -269,10 +280,14 @@ function handleNewsletterSubmit(e) {
     const email = e.target.querySelector('input[type="email"]').value;
     
     if (validateEmail(email)) {
-        console.log('Newsletter subscription:', email);
+        if (isDevelopment) {
+            console.log('Newsletter subscription:', email);
+        }
         // Add API call to subscribe email
     } else {
-        console.log('Invalid email address');
+        if (isDevelopment) {
+            console.log('Invalid email address');
+        }
     }
 }
 
@@ -286,11 +301,15 @@ function checkBrowserSupport() {
         customProperties: CSS.supports('--var', '0')
     };
     
-    console.log('Browser Feature Support:', features);
+    if (isDevelopment) {
+        console.log('Browser Feature Support:', features);
+    }
     
     // Warn if critical features are not supported
     if (!features.flexbox || !features.grid) {
-        console.warn('Your browser may not support all features of this website.');
+        if (isDevelopment) {
+            console.warn('Your browser may not support all features of this website.');
+        }
     }
 }
 
@@ -325,5 +344,7 @@ if (copyrightYear) {
 // Initialize everything on DOM ready
 // ===================================
 document.addEventListener('DOMContentLoaded', () => {
-    console.log('Task Flow website initialized successfully');
+    if (isDevelopment) {
+        console.log('Task Flow website initialized successfully');
+    }
 });
