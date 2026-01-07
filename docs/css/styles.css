@@ -513,6 +513,67 @@ img {
     align-items: center;
 }
 
+/* Mobile Mockup Frame for Screenshots */
+.mobile-mockup {
+    position: relative;
+    width: 320px;
+    max-width: 100%;
+    padding: 16px 12px;
+    background: linear-gradient(135deg, #1e293b 0%, #0f172a 100%);
+    border-radius: 32px;
+    box-shadow: 
+        0 0 0 2px #334155,
+        0 0 0 4px #1e293b,
+        0 20px 50px rgba(0, 0, 0, 0.5),
+        inset 0 0 20px rgba(0, 0, 0, 0.3);
+}
+
+/* Top notch/camera cutout */
+.mobile-mockup::before {
+    content: '';
+    position: absolute;
+    top: 8px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 120px;
+    height: 24px;
+    background: #0f172a;
+    border-radius: 0 0 16px 16px;
+    z-index: 2;
+}
+
+/* Camera dot */
+.mobile-mockup::after {
+    content: '';
+    position: absolute;
+    top: 14px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 10px;
+    height: 10px;
+    background: #1e293b;
+    border-radius: 50%;
+    z-index: 3;
+    box-shadow: 0 0 0 1px rgba(100, 116, 139, 0.3);
+}
+
+/* Screenshot container inside mockup */
+.mobile-mockup-screen {
+    position: relative;
+    width: 100%;
+    background: #000;
+    border-radius: 20px;
+    overflow: hidden;
+    box-shadow: inset 0 0 10px rgba(0, 0, 0, 0.5);
+}
+
+.mobile-mockup-screen img {
+    display: block;
+    width: 100%;
+    height: auto;
+    border-radius: 0;
+}
+
 .screenshot-placeholder {
     width: 100%;
     max-width: 400px;
@@ -995,6 +1056,28 @@ img {
     
     .screenshot-placeholder {
         height: 400px;
+    }
+    
+    .mobile-mockup {
+        width: 280px;
+        padding: 14px 10px;
+        border-radius: 28px;
+    }
+    
+    .mobile-mockup::before {
+        width: 100px;
+        height: 20px;
+        border-radius: 0 0 14px 14px;
+    }
+    
+    .mobile-mockup::after {
+        top: 11px;
+        width: 8px;
+        height: 8px;
+    }
+    
+    .mobile-mockup-screen {
+        border-radius: 16px;
     }
 }
 
