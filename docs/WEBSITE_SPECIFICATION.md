@@ -155,12 +155,12 @@ Logo [☰ Menu]
 
 #### macOS
 - **Badge:** "Coming Soon" badge
-- **Requirements:** TBD (To Be Determined)
+- **Requirements:** To be determined
 - **Status Indicator:** Show development progress or waitlist signup
 
 #### Windows
 - **Badge:** "Coming Soon" badge
-- **Requirements:** TBD (To Be Determined)
+- **Requirements:** To be determined
 - **Status Indicator:** Show development progress or waitlist signup
 
 ### 4.3 Download Section Layout
