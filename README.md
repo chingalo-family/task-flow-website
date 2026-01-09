@@ -95,7 +95,7 @@ task-flow-website/
 
 ## 🎨 Design Specifications
 
-The website follows the design specifications outlined in [WEBSITE_SPECIFICATION.md](WEBSITE_SPECIFICATION.md), including:
+The website follows the design specifications outlined in [docs/WEBSITE_SPECIFICATION.md](docs/WEBSITE_SPECIFICATION.md), including:
 
 ### Color Scheme
 - **Primary Blue:** `#2E90FA`
