@@ -1,4 +1,4 @@
-# Task Flow Website
+# task-flow-website
 
 Official website for the Task Flow application, hosted on GitHub Pages.
 
@@ -9,21 +9,6 @@ Visit: [https://chingalo-family.github.io/task-flow-website/](https://chingalo-f
 ## 📋 Overview
 
 This repository contains the source code for the Task Flow website, a professional landing page showcasing the Task Flow task management and team collaboration application.
-
-## 📚 Documentation
-
-**All documentation is located in the [`docs/`](docs/) directory.**
-
-For detailed information, please refer to:
-
-- **[Documentation Index](docs/README.md)** - Complete documentation overview
-- **[Setup Guide](docs/SETUP.md)** - Get started with development
-- **[Contributing Guidelines](docs/CONTRIBUTING.md)** - How to contribute
-- **[Architecture Overview](docs/ARCHITECTURE.md)** - Technical architecture
-- **[Style Guide](docs/STYLE_GUIDE.md)** - Code style conventions
-- **[Deployment Guide](docs/DEPLOYMENT.md)** - Deployment instructions
-- **[Maintenance Guide](docs/MAINTENANCE.md)** - Ongoing maintenance
-- **[Website Specification](docs/WEBSITE_SPECIFICATION.md)** - Design specifications
 
 ## ✨ Features
 
@@ -56,41 +41,29 @@ npx http-server -p 8080
 # Visit http://localhost:8080
 ```
 
-**For detailed setup instructions, see [docs/SETUP.md](docs/SETUP.md)**
-
 ## 📁 Project Structure
 
 ```
 task-flow-website/
-├── docs/                          # Website files (deployed to GitHub Pages)
-│   ├── index.html                # Main HTML file
-│   ├── privacy-policy.html       # Privacy policy page
-│   ├── terms-of-service.html     # Terms of service page
+├── docs/                      # Website files (deployed to GitHub Pages)
+│   ├── index.html            # Main HTML file
 │   ├── css/
-│   │   └── styles.css            # Stylesheet with dark theme
+│   │   └── styles.css        # Stylesheet with dark theme
 │   ├── js/
-│   │   └── main.js               # JavaScript functionality
+│   │   └── main.js           # JavaScript functionality
 │   ├── images/
-│   │   ├── icons/                # Favicon and icons
-│   │   ├── screenshots/          # App screenshots
-│   │   └── og-image.svg          # Open Graph social media image
-│   ├── robots.txt                # Search engine directives
-│   ├── sitemap.xml               # XML sitemap
-│   ├── .nojekyll                 # Disables Jekyll processing
-│   └── *.md                      # All documentation files
-│       ├── README.md             # Documentation index
-│       ├── SETUP.md              # Setup guide
-│       ├── CONTRIBUTING.md       # Contribution guidelines
-│       ├── ARCHITECTURE.md       # Architecture overview
-│       ├── STYLE_GUIDE.md        # Code style guide
-│       ├── DEPLOYMENT.md         # Deployment guide
-│       ├── MAINTENANCE.md        # Maintenance guide
-│       └── WEBSITE_SPECIFICATION.md  # Design specifications
+│   │   ├── icons/            # Favicon and icons
+│   │   ├── screenshots/      # App screenshots (placeholder structure)
+│   │   └── og-image.svg      # Open Graph social media image
+│   ├── robots.txt            # Search engine directives
+│   ├── sitemap.xml           # XML sitemap
+│   └── .nojekyll             # Disables Jekyll processing
 ├── .github/
 │   └── workflows/
-│       └── deploy.yml            # GitHub Actions deployment workflow
-├── LICENSE                       # License information
-└── README.md                     # This file (project overview)
+│       └── deploy.yml        # GitHub Actions deployment workflow
+├── WEBSITE_SPECIFICATION.md  # Detailed website specifications
+├── DEPLOYMENT.md             # Deployment guide
+└── README.md                 # This file
 ```
 
 ## 🎨 Design Specifications
@@ -119,7 +92,7 @@ The website is automatically deployed to GitHub Pages using GitHub Actions.
 2. GitHub Actions workflow automatically deploys to GitHub Pages
 3. Website is live at: https://chingalo-family.github.io/task-flow-website/
 
-For detailed deployment instructions, see [docs/DEPLOYMENT.md](docs/DEPLOYMENT.md).
+For detailed deployment instructions, see [DEPLOYMENT.md](DEPLOYMENT.md).
 
 ## 📱 Sections
 
@@ -158,26 +131,15 @@ The website is designed to be accessible to all users:
 
 ## 🤝 Contributing
 
-Contributions are welcome! We encourage you to help improve the Task Flow website.
-
-### Quick Contribution Guide
+Contributions are welcome! Please follow these steps:
 
 1. Fork the repository
 2. Create a feature branch (`git checkout -b feature/amazing-feature`)
 3. Make your changes in the `docs/` folder
 4. Test locally to ensure responsiveness
-5. Commit your changes (`git commit -m 'Add: amazing feature'`)
+5. Commit your changes (`git commit -m 'Add amazing feature'`)
 6. Push to the branch (`git push origin feature/amazing-feature`)
 7. Open a Pull Request
-
-**For detailed contribution guidelines, see [docs/CONTRIBUTING.md](docs/CONTRIBUTING.md)**
-
-This includes:
-- Code of Conduct
-- Development workflow
-- Coding standards
-- Pull request process
-- Issue guidelines
 
 ## 📝 License
 
