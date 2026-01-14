@@ -73,7 +73,27 @@ New to the project? Start here:
 1. **Read [SETUP.md](SETUP.md)** to set up your development environment
 2. **Review [ARCHITECTURE.md](ARCHITECTURE.md)** to understand the project structure
 3. **Check [CONTRIBUTING.md](CONTRIBUTING.md)** before making changes
+
 4. **Follow [STYLE_GUIDE.md](STYLE_GUIDE.md)** when writing code
+
+## 🏃‍♂️ Running the Project Locally
+
+To view the website locally, you can serve the static files or open the main page directly:
+
+1. Open `index.html` in your browser using one of the following methods:
+
+  ```bash
+  # Using Python (recommended for local server)
+  python -m http.server 8000
+
+  # Using Node.js (http-server package)
+  npx http-server
+
+  # Or simply open the file directly (macOS)
+  open index.html
+  ```
+
+2. Visit `http://localhost:8000` in your browser to view the website.
 
 ## 📁 Project Structure
 

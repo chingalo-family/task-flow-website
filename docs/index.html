@@ -31,7 +31,7 @@
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
     
     <!-- Font Awesome for Icons -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw==" crossorigin="anonymous" referrerpolicy="no-referrer">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" crossorigin="anonymous" referrerpolicy="no-referrer">
     
     <!-- AOS Animation Library -->
     <link rel="stylesheet" href="https://unpkg.com/aos@2.3.1/dist/aos.css">
@@ -267,7 +267,7 @@
             <div class="container">
                 <div class="section-header" data-aos="fade-up">
                     <h2 class="section-title">Download Task Flow</h2>
-                    <p class="section-description">Available on Android. Coming soon to iOS and other platforms.</p>
+                    <p class="section-description">Available on Android and macOS. Coming soon to iOS and other platforms.</p>
                 </div>
 
                 <div class="download-grid">
@@ -286,6 +286,19 @@
                                 <a href="https://github.com/chingalo-family/task-flow-website/releases/download/v1.0.0/task-flow-v1.0.0.apk" class="button button-download">
                                     <i class="fas fa-download"></i>
                                     Download APK (v1.0.0)
+                                </a>
+                            </div>
+
+                            <!-- macOS -->
+                            <div class="platform-card available">
+                                <div class="platform-icon">
+                                    <i class="fab fa-apple"></i>
+                                </div>
+                                <h4 class="platform-name">macOS</h4>
+                                <p class="platform-requirements">macOS 10.13 or later</p>
+                                <a href="https://github.com/chingalo-family/task-flow-website/releases/download/v1.0.0/task_flow-v1.0.0.zip" class="button button-download">
+                                    <i class="fas fa-download"></i>
+                                    Download App (v1.0.0)
                                 </a>
                             </div>
                         </div>
@@ -312,16 +325,6 @@
                                     <i class="fab fa-linux"></i>
                                 </div>
                                 <h4 class="platform-name">Desktop (Linux)</h4>
-                                <p class="platform-requirements">Requirements TBD</p>
-                                <span class="badge badge-coming-soon">Coming Soon</span>
-                            </div>
-
-                            <!-- macOS -->
-                            <div class="platform-card coming-soon">
-                                <div class="platform-icon">
-                                    <i class="fab fa-apple"></i>
-                                </div>
-                                <h4 class="platform-name">macOS</h4>
                                 <p class="platform-requirements">Requirements TBD</p>
                                 <span class="badge badge-coming-soon">Coming Soon</span>
                             </div>
@@ -445,16 +448,16 @@
                 <div class="footer-section">
                     <h4 class="footer-heading">Follow Us</h4>
                     <div class="social-links">
-                        <a href="#" aria-label="Facebook"><i class="fab fa-facebook"></i></a>
-                        <a href="#" aria-label="Twitter"><i class="fab fa-twitter"></i></a>
-                        <a href="#" aria-label="LinkedIn"><i class="fab fa-linkedin"></i></a>
-                        <a href="#" aria-label="GitHub"><i class="fab fa-github"></i></a>
+                        <a href="https://youtube.com/josephchingalo" aria-label="YouTube" target="_blank" rel="noopener noreferrer"><i class="fab fa-youtube"></i></a>
+                        <a href="https://www.instagram.com/chingalo_family/" aria-label="Instagram" target="_blank" rel="noopener noreferrer"><i class="fab fa-instagram"></i></a>
+                        <a href="https://github.com/chingalo-family" aria-label="GitHub" target="_blank" rel="noopener noreferrer"><i class="fab fa-github"></i></a>
+                        <a href="https://wa.me/255687168637" aria-label="WhatsApp" target="_blank" rel="noopener noreferrer"><i class="fab fa-whatsapp"></i></a>
                     </div>
                 </div>
             </div>
 
             <div class="footer-bottom">
-                <p>&copy; 2025 Task Flow. All rights reserved.</p>
+                <p>&copy; <span id="footer-year"></span> Task Flow. All rights reserved.</p>
             </div>
         </div>
     </footer>
@@ -468,6 +471,9 @@
     <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
     
     <!-- Main JavaScript -->
-    <script src="js/main.js"></script>
+        <script src="js/main.js"></script>
+        <script>
+            document.getElementById('footer-year').textContent = new Date().getFullYear();
+        </script>
 </body>
 </html>
